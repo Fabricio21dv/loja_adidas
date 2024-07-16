@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+header nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 32px 0;
+}
+
+section h2 {
+    border-bottom: 1px solid black;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.about-container img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.about-container div {
+    flex: 2;
+}
+
+#about h2 {
+    margin-bottom: 16px;
+}
+
+.produtos {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0;
+}
+
+.produtos li {
+    flex: 1 1 calc(25% - 16px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.produtos img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.produtos h3 {
+    margin-bottom: 8px;
+}
+
+.produtos p {
+    margin-bottom: 8px;
+}
+
+.produtos strong {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.produtos button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.produtos button:hover {
+    background-color: darkgray;
+}
+
+@media (max-width: 640px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav li {
+        margin-left: 0;
+        margin-bottom: 8px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .produtos {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .produtos li {
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .produtos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .produtos li {
+        flex: 1 1 calc(50% - 16px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .produtos li {
+        flex: 1 1 calc(25% - 16px);
+    }
+}
